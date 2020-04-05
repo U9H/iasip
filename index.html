@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--OHHHH WHOOPS, JUST DROPPED MY MONSTER CONDOM THAT I USE FOR MY MAGNUM DONG-->
+<!--Thanks, /u/bootynuggets for the font suggestion!-->
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+   <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-62288351-1', 'auto');
+   ga('send', 'pageview');
+
+ </script>
+  <script>
+
+  $(function(){
+
+      var url = window.location.href
+      var pieces = url.split("?");
+
+      if (typeof pieces[1] === "undefined"){
+        customized = false;
+      }else{
+        customized = true;
+      }
+
+      function refresh(){
+        $('.center').css('margin-top',$(window).height()/2-$('.center').height()/2);
+      }
+
+      $(window).resize(function(){
+        refresh();
+      });
+
+      document.getElementById("centerid").addEventListener("input", function() {
+          refresh();
+          $('.button').fadeIn();
+      }, false);
+
+      if (customized){
+        if (pieces[1] != ''){
+          broken = pieces[1]
+          //replace weird =%3D with ==
+          encoded = broken.replace(new RegExp("%3D"),"=")
+          console.log(encoded)
+          decoded = window.atob(encoded)
+          $('.center').text(decoded);
+          text = $('.center').text();
+          //add quotes if there are none
+          if (text.charAt(0) != '"'){
+            $('.center').text('"' + text)
+            text = $('.center').text();
+          }
+          if (text.charAt(text.length-1) != '"'){
+            $('.center').text(text + '"')
+          }
+        }
+      }
+
+      //create new
+      $('.button').click(function(){
+        newlink = pieces[0] + '?' + btoa($('.center').text())
+        window.location = newlink
+      });
+
+      refresh();
+    });
+
+
+
+  </script>
+  <style>
+
+    @font-face {
+    font-family: 'textileregular';
+    src: url('fonts/textile-webfont.eot');
+    src: url('fonts/textile-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/textile-webfont.woff2') format('woff2'),
+         url('fonts/textile-webfont.woff') format('woff'),
+         url('fonts/textile-webfont.ttf') format('truetype'),
+         url('fonts/textile-webfont.svg#textileregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    }
+
+    body{
+      background: black;
+    }
+
+    .center{
+      font-family: 'textileregular';
+      color: white;
+      border: none;
+      line-height: 1.5;
+    }
+    .center{
+      width: 70%;
+      margin: 0 auto;
+     font-size: 4em;
+     text-align: center;
+    }
+
+    .button{
+      display: none;
+      border: 1px white solid;
+      position: fixed;
+      bottom: 100px;
+      right: 70px;
+      color: white;
+      padding: 24px;
+      font-size: 24px;
+      border-right-width: 4px;
+      border-bottom-width: 4px;
+      border-radius: 4px;
+      font-family: 'textileregular';
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="centerid" class="center" contentEditable='true'>"It's Always Sunny in Philadelphia"<br>(Edit to Use!)</div><div class="button">Generate!</div>
+
+<div style="visibility: hidden; height: 0; overflow: hidden;"><iframe width="420" height="315" src="https://www.youtube.com/embed/WKFIDLMliHo?autoplay=1" frameborder="0" allowfullscreen></iframe></div>
+
+<div style="color: #2d2d2d; position: fixed; bottom: 4px; left: 4px; font-size: 12px;">BTC: 1393hQTBbQFTYpuMddHJp7NCYrzPajRtCK<br> Sound will not work on mobile.</div>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- iasip ad -->
+<div style="position: fixed; bottom: 0px; margin: 0 auto; width: 100%; text-align: center;">
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px;"
+     data-ad-client="ca-pub-9155129248808225"
+     data-ad-slot="2065232594"></ins></div>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</body>
