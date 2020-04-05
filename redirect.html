@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IASIP</title>
+</head>
+<body>
+    <script>
+        // get query string
+        var url = window.location.href
+        var parts = url.split("?");
+        if (typeof(parts[1]) !== "undefined") {
+            window.location.replace("https://iasip.link" + "?" + parts[1]);
+        } else {
+            window.location.replace("https://iasip.link");
+        }
+    </script>
+</body>
+</html>
